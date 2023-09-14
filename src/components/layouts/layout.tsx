@@ -6,7 +6,7 @@ function SiteLayout({ children }: any) {
   return (
     <main className="bg-zinc-700">
       <Header />
-      <main className="overflow-hidden max-w-7xl mx-auto text-white/90">{children}</main>
+      <main className="overflow-hidden max-w-7xl mx-auto text-white/90 font-mono min-h-screen">{children}</main>
       <Footer />
     </main>
   );
