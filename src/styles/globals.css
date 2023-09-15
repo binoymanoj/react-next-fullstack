@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.breadCrumbSpacing {
+    @apply flex flex-col gap-12;
+}

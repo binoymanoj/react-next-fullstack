@@ -1,3 +1,5 @@
+import Breadcrumbs from "@/components/common/breadcrumbs";
+import { getLayout } from "@/components/layouts/layout";
 import React, { useState } from "react";
 
 const Usestate = () => {
@@ -22,6 +24,7 @@ const Usestate = () => {
 
   return (
     <div>
+      {/* <Breadcrumbs /> */}
       {/* useState Hook */}
       <div className="flex flex-col justify-center items-center gap-10">
         <h2 className="text-center text-2xl font-semibold mt-4 underline">
@@ -78,3 +81,4 @@ const Usestate = () => {
 };
 
 export default Usestate;
+Usestate.getLayout = getLayout;

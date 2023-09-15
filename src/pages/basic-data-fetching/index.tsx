@@ -14,7 +14,7 @@ const JsonDataFetch =  async () => {
       const users: User[] = await res.json();
      
   return (
-    <>
+    <div className='breadCrumbSpacing'>
     <Breadcrumbs />
       <h1>Users</h1>
       <ul>
@@ -22,7 +22,7 @@ const JsonDataFetch =  async () => {
           <li key={user.id}>{user.name}</li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 
