@@ -17,12 +17,16 @@ const topics = [
     link: "/react-hooks",
   },
   {
-    title: "Basic Data Fetching",
+    title: "GET POST in fetch ",
     link: "/basic-data-fetching",
   },
   {
     title: "Axios Data Fetching",
     link: "/axios-data-fetching",
+  },
+  {
+    title: "React Query",
+    link: "/react-query",
   },
 ];
 

@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
 // import { Head } from "next/document";
-import { NextUIProvider } from "@nextui-org/react";
+import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -16,11 +16,15 @@ type AppPropsWithLayout = AppProps & {
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
+  const queryClient = new QueryClient();
+
   return (
     <>
-      <NextUIProvider>
+      <QueryClientProvider client={queryClient}>
+        {/* <Hydrate state={pageProps.dehydratedState}> */}
         {getLayout(<Component {...pageProps} />)}
-      </NextUIProvider>
+        {/* </Hydrate> */}
+      </QueryClientProvider>
     </>
   );
 }
