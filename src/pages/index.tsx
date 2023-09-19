@@ -1,13 +1,6 @@
 import { getLayout } from "@/components/layouts/layout";
 import Link from "next/link";
 import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Button,
-} from "@nextui-org/react";
 import Image from "next/image";
 import TextCard from "@/components/common/text-card";
 
