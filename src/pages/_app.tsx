@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import type { AppProps } from "next/app";
 // import { Head } from "next/document";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         {/* <Hydrate state={pageProps.dehydratedState}> */}
         {getLayout(<Component {...pageProps} />)}
         {/* </Hydrate> */}
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </>
   );

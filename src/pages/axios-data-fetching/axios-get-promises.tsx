@@ -1,3 +1,4 @@
+import Spinner from "@/components/common/spinner";
 import { getLayout } from "@/components/layouts/layout";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -15,7 +16,7 @@ function AxiosGET() {
   }, []);
 
   if (isLoading) {
-    return <h2 className="">Loading...</h2>
+    return <Spinner />;
   }
 
   return (
